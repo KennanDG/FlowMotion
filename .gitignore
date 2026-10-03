@@ -152,3 +152,9 @@ videos/
 conan.lock
 conanbuildinfo.*
 vcpkg_installed/
+
+
+
+# Extras
+
+# real_time_video_processing_roadmap.md
