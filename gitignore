@@ -1,0 +1,154 @@
+# ------------------------------------------------------------
+# Build output
+# ------------------------------------------------------------
+build/
+cmake-build-*/
+out/
+bin/
+lib/
+dist/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+Makefile
+compile_commands.json
+_deps/
+
+# Ninja
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# ------------------------------------------------------------
+# Compiled C/C++ artifacts
+# ------------------------------------------------------------
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+*.pdb
+*.ilk
+*.exp
+
+# Precompiled headers
+*.gch
+*.pch
+
+# ------------------------------------------------------------
+# Python
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+.venv/
+venv/
+env/
+ENV/
+
+*.egg-info/
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# ------------------------------------------------------------
+# Python native build / bindings
+# ------------------------------------------------------------
+*.pyd
+*.pyi.tmp
+.python-version
+
+# ------------------------------------------------------------
+# IDEs and editors
+# ------------------------------------------------------------
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+Debug/
+Release/
+x64/
+x86/
+
+# CLion
+cmake-build-debug/
+cmake-build-release/
+
+# ------------------------------------------------------------
+# OS files
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------
+# Logs and temporary files
+# ------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------
+# Generated media / benchmark output
+# ------------------------------------------------------------
+output/
+outputs/
+results/
+benchmark_results/
+coverage/
+
+# Large local video/image test assets
+data/
+datasets/
+videos/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+
+# Keep intentionally committed sample assets
+!examples/assets/
+!examples/assets/**
+
+# ------------------------------------------------------------
+# Environment / secrets
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ------------------------------------------------------------
+# Package managers / generated dependency folders
+# ------------------------------------------------------------
+conan.lock
+conanbuildinfo.*
+vcpkg_installed/
