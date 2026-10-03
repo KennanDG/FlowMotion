@@ -1,0 +1,76 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "dev",
+      "displayName": "Development",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/dev",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "FLOWMOTION_BUILD_EXAMPLES": "ON",
+        "FLOWMOTION_BUILD_TESTS": "ON",
+        "FLOWMOTION_BUILD_PYTHON": "OFF"
+      }
+    },
+    {
+      "name": "release",
+      "displayName": "Release",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "FLOWMOTION_BUILD_EXAMPLES": "ON",
+        "FLOWMOTION_BUILD_TESTS": "ON",
+        "FLOWMOTION_BUILD_PYTHON": "OFF"
+      }
+    },
+    {
+      "name": "python",
+      "displayName": "Development + Python bindings",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/python",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "FLOWMOTION_BUILD_EXAMPLES": "ON",
+        "FLOWMOTION_BUILD_TESTS": "ON",
+        "FLOWMOTION_BUILD_PYTHON": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "dev",
+      "configurePreset": "dev"
+    },
+    {
+      "name": "release",
+      "configurePreset": "release"
+    },
+    {
+      "name": "python",
+      "configurePreset": "python"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "dev",
+      "configurePreset": "dev",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "release",
+      "configurePreset": "release",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}
